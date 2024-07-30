@@ -1,0 +1,39 @@
+:root {
+  --primary-color: #0071ce;
+  --secondary-color: #ffc220;
+  --primary-color-accent: #005397;
+  --primary-color-dark: #003a69;
+  --border-color-gray: #bdbdbe;
+  --button-border-radius: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: unset;
+}
+
+.btn {
+  height: 40px;
+  color: white;
+  background-color: #0071ce;
+  color: white;
+  font-size: medium;
+  border: none;
+  cursor: pointer;
+  width: 180px;
+  border-radius: var(--button-border-radius);
+}

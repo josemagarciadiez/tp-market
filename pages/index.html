@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenido a Walmart | Estés donde estés</title>
+
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/product-card.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../pages/index.html"
+          ><img src="../assets/logo.svg" alt="Logo Walmart" width="120"
+        /></a>
+      </div>
+      <ul>
+        <li class="li-link active"><a href="../pages/index.html">Inicio</a></li>
+        <li class="li-link"><a href="../pages/shop.html">Tienda</a></li>
+        <li class="li-link"><a href="../pages/contact.html">Contacto</a></li>
+      </ul>
+
+      <!-- <button id="button-cart" type="button" class="cart-icon">
+        <i class="fa-solid fa-cart-shopping fa-xl"></i>
+        <span id="items-carrito">0</span>
+      </button> -->
+
+      <div class="menu-toggle">
+        <i class="fa-solid fa-bars fa-xl"></i>
+      </div>
+
+      <div class="dropdown-menu">
+        <ul>
+          <li class="li-link active">
+            <a href="../pages/index.html">Inicio</a>
+          </li>
+          <li class="li-link"><a href="../pages/shop.html">Tienda</a></li>
+          <li class="li-link"><a href="../pages/contact.html">Contacto</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="slider-section">
+        <div class="slider">
+          <img id="slide-1" alt="" src="../assets/slider/slide-1.webp" />
+          <img id="slide-2" alt="" src="../assets/slider/slide-2.webp" />
+          <img id="slide-3" alt="" src="../assets/slider/slide-3.webp" />
+        </div>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
+      </section>
+
+      <!-- <section class="bento-sale">
+        <div class="top-row">
+          <article class="bento-card category-sale">
+            <div class="sale-text">
+              <span>Del 2 al 15 de agosto</span>
+              <h2>Electrodomésticos</h2>
+            </div>
+            <div
+              class="sale-image"
+              style="background-image: url(../assets/sales/electro.webp)"></div>
+          </article>
+          <article class="bento-card category-sale">
+            <div class="sale-text">
+              <span>Del 2 al 15 de agosto</span>
+              <h2>Climatización</h2>
+            </div>
+            <div
+              class="sale-image"
+              style="
+                background-image: url(../assets/sales/climatizacion.webp);
+              "></div>
+          </article>
+        </div>
+        <div class="bottom-row">
+          <article class="bento-card bank-card">
+            <h2>Coordiná tu entrega para los Lunes y Jueves</h2>
+            <div>
+              <h3>-30%</h3>
+              <p>
+                <span>Crédito y Débito</span><br />Tope de reintegro $10.000
+              </p>
+              <img src="../assets/banks/icbc.webp" alt="Logo ICBC" />
+            </div>
+          </article>
+          <article class="bento-card bank-card">
+            <h2>Coordiná tu entrega para los días Martes</h2>
+            <div>
+              <h3>-35%</h3>
+              <p>
+                <span>Tarjetas de Crédito</span><br />Tope de reintegro $20.000
+              </p>
+              <img
+                src="../assets/banks/hipotecario.webp"
+                alt="Logo Banco Hipotecario" />
+            </div>
+          </article>
+          <article class="bento-card bank-card">
+            <h2>Coordiná tu entrega para los días Miércoles</h2>
+            <div>
+              <h3>-30%</h3>
+              <p>
+                <span>Tarjetas de Crédito</span><br />Tope de reintegro $10.000
+              </p>
+              <img src="../assets/banks/nacion.webp" alt="Logo Banco Nación" />
+            </div>
+          </article>
+        </div>
+      </section> -->
+
+      <section class="most-picked">
+        <div class="title">
+          <span>Los más elegidos</span>
+          <a href="../pages/shop.html">Ver todos</a>
+        </div>
+        <div class="product-list">
+          <article class="product-card">
+            <div
+              class="product-card_image"
+              style="background-image: url(../assets/products/p27.webp)">
+              <span>OFERTA</span>
+              <button>
+                <img src="../assets/icons/heart.svg" alt="icono guardar" />
+              </button>
+            </div>
+            <div class="product-card_title">
+              <p>Skip</p>
+              <h2>Jabón Liquido Para Diluir 500ml Rinde 3l</h2>
+            </div>
+            <div class="product-card_cart">
+              <div class="cart_price">
+                <del>$ 7691,00</del>
+                <h3>$ 7691,00</h3>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div
+              class="product-card_image"
+              style="background-image: url(../assets/products/p30.webp)">
+              <span>OFERTA</span>
+              <button>
+                <img src="../assets/icons/heart.svg" alt="icono guardar" />
+              </button>
+            </div>
+            <div class="product-card_title">
+              <p>Dove</p>
+              <h2>Antitranspirante En Aerosol Original 150ml</h2>
+            </div>
+            <div class="product-card_cart">
+              <div class="cart_price">
+                <del>$ 2092,00</del>
+                <h3>$ 7691,00</h3>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div
+              class="product-card_image"
+              style="background-image: url(../assets/products/p36.webp)">
+              <span>OFERTA</span>
+              <button>
+                <img src="../assets/icons/heart.svg" alt="icono guardar" />
+              </button>
+            </div>
+            <div class="product-card_title">
+              <p>Kevin</p>
+              <h2>Colonia Natural Black Spray 60ml</h2>
+            </div>
+            <div class="product-card_cart">
+              <div class="cart_price">
+                <del>$ 11549,00</del>
+                <h3>$ 7691,00</h3>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div
+              class="product-card_image"
+              style="background-image: url(../assets/products/p37.webp)">
+              <span>OFERTA</span>
+              <button>
+                <img src="../assets/icons/heart.svg" alt="icono guardar" />
+              </button>
+            </div>
+            <div class="product-card_title">
+              <p>Vichy</p>
+              <h2>Protector Solar Crema Toque Seco Color 50ml</h2>
+            </div>
+            <div class="product-card_cart">
+              <div class="cart_price">
+                <del>$ 49800,00</del>
+                <h3>$ 7691,00</h3>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div
+              class="product-card_image"
+              style="background-image: url(../assets/products/p38.webp)">
+              <span>OFERTA</span>
+              <button>
+                <img src="../assets/icons/heart.svg" alt="icono guardar" />
+              </button>
+            </div>
+            <div class="product-card_title">
+              <p>Givenchy</p>
+              <h2>Perfume Gentleman Intense Edt 100ml</h2>
+            </div>
+            <div class="product-card_cart">
+              <div class="cart_price">
+                <del>$ 184100,00</del>
+                <h3>$ 7691,00</h3>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="history-header">
+        <h3>Historia</h3>
+      </section>
+
+      <section class="hero-section">
+        <div>
+          <h1>Pasado, presente y potencial</h1>
+        </div>
+      </section>
+
+      <section class="spark-section">
+        <div class="spark-text">
+          <p>
+            Walmart inició con un solo hombre. En 1962, Sam Walton comenzó con
+            solo una tienda y una misión: ayudar a la gente a ahorrar dinero así
+            podrián vivir mejor. Como una compañia mundial en constante
+            crecimiento, y con casi 11,500 tiendas, mantenemos la vision del Sr.
+            Sam, pero ahora, somos capaces de ayudar a más clientes que nunca.
+          </p>
+        </div>
+        <div class="spark-icon_container">
+          <div></div>
+        </div>
+      </section>
+
+      <section class="timeline-section">
+        <h2>Todo empezó con una chispa.</h2>
+        <p>
+          Desde los últimos 50 años, fuimos desde una tienda en Rogers, AR hasta
+          una compañia digital de categoría mundial. En el camino, hemos logrado
+          mucho!.
+        </p>
+        <article>
+          <div class="timeline-info">
+            <span>REVOLUCION DEL RETAIL</span>
+            <h3>Los 60's</h3>
+            <p>
+              El 2 de Julio de 1962, Sam Walton inauguró la primer tienda de
+              Walmart en Rogers, AR. Para el año 1969, la compañia estaba
+              oficialmente establecida y registraba $12.7 mil millones de
+              dolares en ventas anuales.
+            </p>
+          </div>
+          <div class="timeline-image_container left">
+            <div
+              class="timeline-image"
+              style="
+                background-image: url(../assets/history-images/image-1.jpeg);
+              "></div>
+          </div>
+        </article>
+        <article>
+          <div class="timeline-image_container">
+            <div
+              class="timeline-image"
+              style="
+                background-image: url(../assets/history-images/image-2.jpeg);
+              "></div>
+          </div>
+          <div class="timeline-info left">
+            <span>SOMOS NACIONALES</span>
+            <h3>Los 70's</h3>
+            <p class="sofia-sans-condesed-global heading-2">
+              Los 70's fue la decada de un crecimiento increible. En este
+              periodo nos convertimos en una empresa que cotiza en bolsa,
+              abriendo nuestro primer Centro de Distribución. Y que más? En
+              1975, el Walmart Cheer nació.
+            </p>
+          </div>
+        </article>
+        <article>
+          <div class="timeline-info">
+            <span>LA DECADA DE LOS LOGROS</span>
+            <h3>Los 80's</h3>
+            <p class="sofia-sans-condesed-global heading-2">
+              Walmart alcanzó mil millones de dolares en ventas, abrió el primer
+              Sam's Club y el primer Walmart Supercenter. Para finales de los
+              80's, Walmart tenía 276 tiendas y empleaba cerca de 21,000
+              asociados. Ah, y Sam Walton bailó hula-hula en Wall Street.
+            </p>
+          </div>
+          <div class="timeline-image_container left">
+            <div
+              class="timeline-image"
+              style="
+                background-image: url(../assets/history-images/image-3.jpeg);
+              "></div>
+          </div>
+        </article>
+        <article>
+          <div class="timeline-image_container">
+            <div
+              class="timeline-image"
+              style="
+                background-image: url(../assets/history-images/image-4.jpeg);
+              "></div>
+          </div>
+          <div class="timeline-info left">
+            <span>UNA COMPAÑIA GLOBAL</span>
+            <h3>Los 90's</h3>
+            <p class="sofia-sans-condesed-global heading-2">
+              Para 1990, Walmart fue el vendedor número 1 del pais, mientras el
+              Walmart Supercenter redefinió la comodidad de una sola parada para
+              comprar. Every Day Low Prices fue mundial. En 1997, celebramos el
+              año que alcanzamos $100 mil millones en ventas.
+            </p>
+          </div>
+        </article>
+        <article>
+          <div class="timeline-info">
+            <span>NUEVO MILENIO</span>
+            <h3>Los 2000's</h3>
+            <p class="sofia-sans-condesed-global heading-2">
+              Como CEO, Doug McMillon encarna el espiritu innovador del nuestro
+              fundador Sam Walton. Desde la adquisición de Jet.com en 2016, le
+              hemos dado la bienvenida a Walmart a nuevas marcas, incluyendo a
+              Shoebuy, Hayneedle, Moosejaw, Modcloth, entre otras. Nuestra
+              innovaciones tecnológicas son impulsadas por nuestro equipo de
+              investigación @WalmartLabs y nuestra incubadora Store 8.
+            </p>
+          </div>
+          <div class="timeline-image_container left">
+            <div
+              class="timeline-image"
+              style="
+                background-image: url(../assets/history-images/image-5.jpeg);
+              "></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <section class="links">
+        <div class="logo">
+          <a href="../pages/index.html"
+            ><img src="../assets/logo-color.svg" alt="Logo Walmart" width="120"
+          /></a>
+        </div>
+        <div class="socials">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/walmart/"
+                ><i class="fa-brands fa-instagram fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/walmart" target="_blank"
+                ><i class="fa-brands fa-square-facebook fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/walmart" target="_blank"
+                ><i class="fa-brands fa-x-twitter fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/walmart" target="_blank"
+                ><i class="fa-brands fa-linkedin fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/walmart"
+                ><i class="fa-brands fa-pinterest fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/walmart"
+                ><i class="fa-brands fa-youtube fa-lg"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="news">
+        <div class="contact">
+          <i class="fa-solid fa-phone fa-xl"></i>
+          <p><strong>0810 444 9256</strong><br />Atención al cliente</p>
+        </div>
+        <form class="suscription">
+          <label for="email-suscription"> Recibí todas las novedades </label>
+          <div>
+            <input
+              id="email-suscription"
+              type="text"
+              placeholder="Ingresá tu email" />
+            <button id="button-suscription">Enviar</button>
+          </div>
+        </form>
+      </section>
+      <section class="copy">
+        <span> &copy 2024 José </span>
+        - <a href="#">Política de privacidad</a> -
+        <a href="#">Terminos y condiciones</a>
+      </section>
+    </footer>
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/footer.js"></script>
+  </body>
+</html>

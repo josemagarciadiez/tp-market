@@ -1,0 +1,134 @@
+header {
+  position: relative;
+  background-color: var(--primary-color);
+  height: 60px;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > div.logo {
+    padding: 0 100px;
+  }
+  > ul {
+    display: flex;
+    gap: 1rem;
+  }
+  > button {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    > span {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      background-color: var(--secondary-color);
+      color: white;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      font-size: 10px;
+      display: grid;
+      place-content: center;
+    }
+  }
+  > button:hover {
+    background-color: var(--primary-color-accent);
+  }
+  > button:active {
+    border: 2px solid var(--primary-color-accent);
+  }
+  > div.menu-toggle {
+    cursor: pointer;
+    color: white;
+    display: none;
+  }
+  > div.dropdown-menu {
+    display: none;
+    visibility: hidden;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: var(--primary-color);
+    transition: height 0.2s ease;
+    > ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      > li button {
+        height: 35px;
+        width: 200px;
+        border-radius: var(--button-border-radius);
+        border: none;
+        color: white;
+        background-color: var(--secondary-color);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+      }
+    }
+  }
+  > div.dropdown-menu.open {
+    visibility: visible;
+    height: fit-content;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 760px) {
+  header {
+    > div.logo {
+      padding: 0;
+    }
+    > ul,
+    > button {
+      display: none;
+    }
+    > div.menu-toggle {
+      display: block;
+    }
+    > div.dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.li-link {
+  height: 30px;
+  width: 100px;
+  display: grid;
+  place-content: center;
+  > a {
+    color: white;
+    padding-bottom: 8px;
+  }
+}
+
+.li-link:hover {
+  border-bottom: 4px solid white;
+  border-radius: 4px;
+  > a {
+    color: white;
+  }
+}
+
+.active {
+  border-bottom: 4px solid var(--secondary-color);
+  border-radius: 4px;
+  > a {
+    color: var(--secondary-color);
+  }
+}

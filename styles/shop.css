@@ -1,0 +1,129 @@
+main {
+  position: relative;
+}
+
+section.cart-section {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  border-bottom: 0.5px solid gray;
+  width: 100%;
+  min-height: 114px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  > img {
+    height: 90px;
+  }
+  > div {
+    /* border: 1px solid red; */
+    min-width: 200px;
+    height: 75%;
+    font-size: 13px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    > p {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    > p.total-p {
+      font-weight: 600;
+    }
+  }
+  > select {
+    border-radius: var(--button-border-radius);
+    height: 40px;
+    width: 180px;
+    text-align: center;
+  }
+}
+
+section.cart-section.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+section.product-section {
+  margin-top: 20px;
+  padding: 15px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+section.alert-section {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  width: 400px;
+  background-color: white;
+  border: 0.5px solid gray;
+  border-radius: 20px;
+  z-index: 50;
+  animation: slide-in 0.8s forwards;
+  font-size: small;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > div {
+    height: 40px;
+    display: grid;
+    place-content: center;
+  }
+  > div.alert-type {
+    width: 50px;
+    background-color: rgba(0, 128, 0, 0.96);
+    border-right: 0.5px solid gray;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    > i {
+      color: white;
+    }
+  }
+  > div.alert-close {
+    width: 50px;
+    border-left: 0.5px solid gray;
+    > button {
+      background-color: unset;
+      border: none;
+      cursor: pointer;
+      > i {
+        color: gray;
+      }
+    }
+  }
+}
+
+section.alert-section.hidden {
+  display: none;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@media (max-width: 730px) {
+  section.cart-section {
+    padding: 25px;
+    flex-direction: column;
+    gap: 20px;
+    > div p {
+      margin: 8px;
+    }
+  }
+}

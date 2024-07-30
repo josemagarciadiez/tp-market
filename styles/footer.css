@@ -1,0 +1,108 @@
+footer {
+  width: 100%;
+  padding: 0;
+  padding-top: 20px;
+  border-top: 0.5px solid var(--border-color-gray);
+  > section.links {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    > div.logo {
+      padding: 0 50px;
+    }
+    > div ul {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+  }
+  > section.news {
+    min-height: 100px;
+    padding: 0 100px;
+    color: white;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    > div.contact {
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      > p {
+        font-weight: 200;
+        > strong {
+          font-weight: 500;
+        }
+      }
+    }
+    > form.suscription {
+      display: flex;
+      flex-direction: column;
+      align-items: last baseline;
+      justify-content: center;
+      gap: 10px;
+      > label {
+        font-size: 14px;
+      }
+      > div {
+        height: 30px;
+        display: flex;
+        gap: 10px;
+        > input {
+          width: 250px;
+          height: 100%;
+          border: none;
+          border-radius: 5px;
+          padding-left: 5px;
+        }
+        > button {
+          height: 100%;
+          color: var(--primary-color);
+          border: none;
+          border-radius: 5px;
+          background-color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  > section.copy {
+    background-color: rgb(242, 242, 242);
+    height: 40px;
+    font-size: 12px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    > a {
+      color: unset;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    > section.links {
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    > section.news {
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      > div.contact {
+        padding-top: 20px;
+      }
+      > form.suscription {
+        padding-bottom: 20px;
+        align-items: center;
+      }
+    }
+  }
+}

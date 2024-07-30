@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Los precios más bajos siempre | Estés donde estés</title>
+
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/shop.css" />
+    <link rel="stylesheet" href="../styles/product-card.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../pages/index.html"
+          ><img src="../assets/logo.svg" alt="Logo Walmart" width="120"
+        /></a>
+      </div>
+
+      <button id="show-cart_button" type="button" class="cart-icon">
+        <i class="fa-solid fa-cart-shopping fa-xl"></i>
+        <span>0</span>
+      </button>
+
+      <ul>
+        <li class="li-link"><a href="../pages/index.html">Inicio</a></li>
+        <li class="li-link active"><a href="../pages/shop.html">Tienda</a></li>
+        <li class="li-link"><a href="../pages/contact.html">Contacto</a></li>
+      </ul>
+
+      <div class="menu-toggle">
+        <i class="fa-solid fa-bars fa-xl"></i>
+      </div>
+
+      <div class="dropdown-menu">
+        <ul>
+          <li class="li-link"><a href="../pages/index.html">Inicio</a></li>
+          <li class="li-link active">
+            <a href="../pages/shop.html">Tienda</a>
+          </li>
+          <li class="li-link"><a href="../pages/contact.html">Contacto</a></li>
+          <li>
+            <button id="show-cart_link" type="button">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Ver carrito</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="cart-section hidden">
+        <img src="../assets/empty-cart.svg" alt="carrito vacio" />
+        <div>
+          <p>Artículos: <span id="cart-items_span">0</span></p>
+          <p>Subtotal: <span id="cart-subtotal_span">$ 0,00</span></p>
+          <p>Descuentos: <span id="cart-discount_span">$ 0,00</span></p>
+          <p class="total-p">TOTAL: <span id="cart-total_span">$ 0,00</span></p>
+        </div>
+        <select name="pago" id="pago">
+          <option value="cash">Efectivo</option>
+          <option value="debit">Tarjeta de débito</option>
+          <option value="credit">Tarjeta de crédito</option>
+          <option value="app">Mercado Pago</option>
+        </select>
+        <button class="btn" id="boton-finalizar">Finalizar compra</button>
+      </section>
+
+      <section class="alert-section hidden">
+        <div class="alert-type">
+          <i class="fa-solid fa-circle-check fa-xl"></i>
+        </div>
+        <div class="alert-content">
+          <span>Se agregó el producto correctamente</span>
+        </div>
+        <div class="alert-close">
+          <button>
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="product-section"></section>
+    </main>
+
+    <footer>
+      <section class="links">
+        <div class="logo">
+          <a href="../pages/index.html"
+            ><img src="../assets/logo-color.svg" alt="Logo Walmart" width="120"
+          /></a>
+        </div>
+        <div class="socials">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/walmart/" target="_blank"
+                ><i class="fa-brands fa-instagram fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/walmart" target="_blank"
+                ><i class="fa-brands fa-square-facebook fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/walmart" target="_blank"
+                ><i class="fa-brands fa-x-twitter fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/walmart" target="_blank"
+                ><i class="fa-brands fa-linkedin fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/walmart" target="_blank"
+                ><i class="fa-brands fa-pinterest fa-lg"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/walmart" target="_blank"
+                ><i class="fa-brands fa-youtube fa-lg"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="news">
+        <div class="contact">
+          <i class="fa-solid fa-phone fa-xl"></i>
+          <p><strong>0810 444 9256</strong><br />Atención al cliente</p>
+        </div>
+        <form class="suscription">
+          <label for="email-suscription"> Recibí todas las novedades </label>
+          <div>
+            <input
+              id="email-suscription"
+              type="text"
+              placeholder="Ingresá tu email" />
+            <button id="button-suscription">Enviar</button>
+          </div>
+        </form>
+      </section>
+      <section class="copy">
+        <span> &copy 2024 José </span>
+        - <a href="#">Política de privacidad</a> -
+        <a href="#">Terminos y condiciones</a>
+      </section>
+    </footer>
+
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/footer.js"></script>
+    <script src="../scripts/shop.js"></script>
+  </body>
+</html>

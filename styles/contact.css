@@ -1,0 +1,83 @@
+section.hero-section {
+  min-height: 300px;
+  position: relative;
+  padding: 30px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url(../assets/contact-wall.webp);
+  > div {
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    font-style: italic;
+    > h1 {
+      font-size: 34px;
+      font-weight: 300;
+      font-style: normal;
+      font-style: oblique;
+    }
+  }
+}
+
+section.contact-section {
+  padding: 40px;
+  display: grid;
+  place-content: center;
+  > div.contact-section_container {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 0.5px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    min-width: 600px;
+    max-width: 800px;
+    > p {
+      font-size: small;
+      text-align: justify;
+      line-height: 180%;
+    }
+    > p.first-p {
+      font-size: medium !important;
+    }
+    > form.contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      > div {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        > label {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          font-size: small;
+          font-weight: 400;
+          > input {
+            height: 40px;
+            border: 0.5px solid lightgrey;
+            border-radius: 5px;
+            padding-left: 10px;
+          }
+          > textarea {
+            min-height: 150px;
+            border: 0.5px solid lightgrey;
+            border-radius: 5px;
+            resize: vertical;
+            padding-left: 10px;
+            padding-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
