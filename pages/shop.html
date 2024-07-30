@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/shop.css" />
     <link rel="stylesheet" href="../styles/product-card.css" />
+    <link rel="stylesheet" href="../styles/alert.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -66,21 +67,21 @@
           <p>Descuentos: <span id="cart-discount_span">$ 0,00</span></p>
           <p class="total-p">TOTAL: <span id="cart-total_span">$ 0,00</span></p>
         </div>
-        <select name="pago" id="pago">
+        <select name="payment" id="payment-method">
           <option value="cash">Efectivo</option>
           <option value="debit">Tarjeta de débito</option>
           <option value="credit">Tarjeta de crédito</option>
           <option value="app">Mercado Pago</option>
         </select>
-        <button class="btn" id="boton-finalizar">Finalizar compra</button>
+        <button class="btn" id="buy-button">Finalizar compra</button>
       </section>
 
       <section class="alert-section hidden">
         <div class="alert-type">
-          <i class="fa-solid fa-circle-check fa-xl"></i>
+          <!-- <i class="fa-solid fa-circle-check fa-xl"></i> -->
         </div>
         <div class="alert-content">
-          <span>Se agregó el producto correctamente</span>
+          <!-- <span>Se agregó el producto correctamente</span> -->
         </div>
         <div class="alert-close">
           <button>

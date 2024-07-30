@@ -1,0 +1,55 @@
+section.alert-section {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  width: 400px;
+  background-color: white;
+  border: 0.5px solid gray;
+  border-radius: 20px;
+  z-index: 50;
+  animation: slide-in 0.8s forwards;
+  font-size: small;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > div {
+    height: 40px;
+    display: grid;
+    place-content: center;
+  }
+  > div.alert-type {
+    width: 50px;
+    border-right: 0.5px solid gray;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    > i {
+      color: white;
+    }
+  }
+  > div.alert-close {
+    width: 50px;
+    border-left: 0.5px solid gray;
+    > button {
+      background-color: unset;
+      border: none;
+      cursor: pointer;
+      > i {
+        color: gray;
+      }
+    }
+  }
+}
+
+section.alert-section.hidden {
+  display: none;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

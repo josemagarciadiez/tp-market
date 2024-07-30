@@ -364,11 +364,25 @@ function animateCartIcon(items) {
 
 const $alert = document.querySelector("section.alert-section");
 
-function showAlert() {
+function showAlert(message, type) {
+  const $success = `<i class="fa-solid fa-circle-check fa-xl"></i>`;
+  const $error = `<i class="fa-solid fa-circle-xmark fa-xl"></i>`;
+  const $alertType = document.querySelector("div.alert-type");
+
+  const $alertContent = document.querySelector("div.alert-content");
+  $alertContent.innerHTML = `<span>${message}</span>`;
+
+  if (type === "error") {
+    $alertType.innerHTML = $error;
+    $alertType.style.backgroundColor = "rgba(255, 0, 0, 0.96)";
+  } else {
+    $alertType.innerHTML = $success;
+    $alertType.style.backgroundColor = "rgba(0, 128, 0, 0.96)";
+  }
   $alert.classList.remove("hidden");
   setTimeout(() => {
     $alert.classList.add("hidden");
-  }, 6000);
+  }, 20000);
 }
 
 /* Funciones utilitarias */
@@ -394,6 +408,8 @@ const $items = document.getElementById("cart-items_span");
 const $subtotal = document.getElementById("cart-subtotal_span");
 const $discount = document.getElementById("cart-discount_span");
 const $total = document.getElementById("cart-total_span");
+const $payment = document.getElementById("payment-method");
+const $finishButton = document.getElementById("buy-button");
 
 function updateCart(quantity, index) {
   cart.items += quantity;
@@ -407,9 +423,17 @@ function updateCart(quantity, index) {
   $subtotal.innerText = formatPrice(cart.subtotal);
   $discount.innerText = formatPrice(cart.discount);
   $total.innerText = formatPrice(cart.total);
-
-  showAlert();
 }
+
+function finishBuy() {
+  cart.payment = $payment.value;
+
+  if (cart.items === 0) {
+    alert("El carrito esta vacio");
+  }
+}
+
+$finishButton.addEventListener("click", finishBuy);
 
 /*
 <article class="card">
@@ -575,25 +599,15 @@ function createCard(product, index) {
     }
 
     if (items > product.stock) {
-      alert(`No contamos con stock suficiente de ${product.title}.`);
-      // $message.style.color = "red";
-      // $message.innerText = "Sin stock suficiente";
-      // setTimeout(() => {
-      //   $message.style.color = "unset";
-      //   $message.innerText = getMessage(product.stock);
-      // }, 2000);
+      showAlert("No contamos con stock suficiente", "error");
     } else {
-      if (items === 1) {
-        // alert(`Se agregó una unidad de ${product.title} al carrito.`);
-      } else {
-        // alert(`Se agregaron ${items} unidades de ${product.title} al carrito.`);
-      }
       // Actualizar stock global
       data[index].stock -= items;
       // Actualizar html stock
       $message.innerText = getMessage(product.stock);
       // Actualizar carrito
       updateCart(items, index);
+      showAlert("Se agregó el producto correctamente", "success");
     }
     // Actualizar HTML de unidades
     items = 0;
