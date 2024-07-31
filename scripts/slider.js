@@ -1,4 +1,3 @@
-let slideIndex = 0;
 const $slides = document.querySelectorAll("picture.slide");
 const $dots = document.querySelectorAll("span.slider-dot");
 
