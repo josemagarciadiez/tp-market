@@ -391,7 +391,7 @@ function showAlert(message, type) {
 
   const closeAlertTimeout = setTimeout(() => {
     $alert.classList.add("hidden");
-  }, 20000);
+  }, 6000);
 
   $closeAlertButton.addEventListener("click", function () {
     $alert.classList.add("hidden");
