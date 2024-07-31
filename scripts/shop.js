@@ -351,6 +351,13 @@ const cart = {
   payment: "cash",
 };
 
+const PAYMENT_METHOD = {
+  cash: "Efectivo",
+  debit: "Tarjeta de débito",
+  credit: "Tarjtea de crédito",
+  app: "Mercado Pago",
+};
+
 const $cartIcon = document.querySelector("#show-cart_button i");
 const $cartItems = document.querySelector("#show-cart_button span");
 
@@ -430,6 +437,8 @@ function finishBuy() {
 
   if (cart.items === 0) {
     alert("El carrito esta vacio");
+  } else {
+    alert(`Compra finalizada con éxito ${PAYMENT_METHOD[cart.payment]}`);
   }
 }
 
