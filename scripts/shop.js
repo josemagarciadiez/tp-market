@@ -402,9 +402,17 @@ function showAlert(message, type) {
 /* Funciones utilitarias */
 // TODO: Formatear miles
 function formatPrice(price) {
-  const text = price.toFixed(2);
-  const arr = text.split(".");
-  return `$ ${arr}`;
+  const text = price.toFixed(2).split(".");
+  const cents = text[1];
+  const hundreds = Number(text[0] % 1000)
+    .toFixed(0)
+    .padStart(3, "0");
+  const thousandths = Math.floor(Number(text[0] / 1000));
+  if (Number(thousandths) > 0) {
+    return `$ ${thousandths}.${hundreds},${cents}`;
+  } else {
+    return `$ ${hundreds},${cents}`;
+  }
 }
 
 function getMessage(stock) {
