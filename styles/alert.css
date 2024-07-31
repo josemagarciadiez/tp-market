@@ -75,3 +75,15 @@ section.alert-section.hidden {
     animation: swipe-in 0.8s forwards;
   }
 }
+
+@media (max-width: 400px) {
+  section.alert-section {
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    border-radius: 0;
+    > div.alert-type {
+      border-radius: 0;
+    }
+  }
+}
