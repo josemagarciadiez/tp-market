@@ -1,7 +1,5 @@
 section.alert-section {
   position: fixed;
-  right: 5px;
-  top: 65px;
   width: 400px;
   background-color: white;
   border: 0.5px solid gray;
@@ -60,5 +58,19 @@ section.alert-section.hidden {
   }
   100% {
     transform: translateX(0%);
+  }
+}
+
+@media (min-width: 731px) {
+  section.alert-section {
+    right: 5px;
+    top: 65px;
+  }
+}
+
+@media (max-width: 730px) {
+  section.alert-section {
+    right: 5px;
+    bottom: 5px;
   }
 }
