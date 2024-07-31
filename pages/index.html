@@ -53,9 +53,31 @@
     <main>
       <section class="slider-section">
         <div class="slider">
-          <img id="slide-1" alt="" src="../assets/slider/slide-1.webp" />
-          <img id="slide-2" alt="" src="../assets/slider/slide-2.webp" />
-          <img id="slide-3" alt="" src="../assets/slider/slide-3.webp" />
+          <img
+            id="slide-1"
+            alt=""
+            src="../assets/slider/slide-1_small.webp"
+            srcset="
+              ../assets/slider/slide-1_small.webp  700w,
+              ../assets/slider/slide-1.webp       1920w
+            "
+            sizes="(min-width:700px) 100%, 100%" />
+          <img
+            id="slide-2"
+            alt=""
+            src="../assets/slider/slide-2_small.webp"
+            srcset="
+              ../assets/slider/slide-2_small.webp  700w,
+              ../assets/slider/slide-2.webp       1920w
+            " />
+          <img
+            id="slide-3"
+            alt=""
+            src="../assets/slider/slide-3_small.webp"
+            srcset="
+              ../assets/slider/slide-3_small.webp  700w,
+              ../assets/slider/slide-2.webp       1920w
+            " />
         </div>
         <div class="slider-nav">
           <a href="#slide-1"></a>
