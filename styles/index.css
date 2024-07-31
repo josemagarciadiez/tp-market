@@ -5,12 +5,114 @@ main {
 }
 
 section.slider-section {
+  /* border: 1px solid red; */
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  > div.slider {
+    overflow-x: hidden;
+    display: flex;
+    > picture.slide {
+      animation: fade 1.5s;
+      > img {
+        width: 100%;
+      }
+    }
+  }
+  > div.slider-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    > span.slider-dot {
+      cursor: pointer;
+      height: 0.8rem;
+      width: 0.8rem;
+      border-radius: 50%;
+      background-color: lightgray;
+      transition: background-color 0.6s ease;
+    }
+    > span.slider-dot:hover,
+    span.slider.active {
+      background-color: grey;
+    }
+  }
+}
+
+/* section.slider-section {
+  border: 1px solid red;
+  width: 100%;
+  min-height: 500px;
+  > div.slider {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    > div.slide {
+      display: none;
+      > img {
+        width: 100%;
+      }
+    }
+    > div.slide.fade {
+      animation: fade 1.5s;
+    }
+    > a.slider-prev,
+    a.slider-next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    > a.slider-next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+  }
+  > div.slider-nav {
+    text-align: center;
+    > span.slider-dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: lightgray;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    > span.slider-dot:hover,
+    span.slider-dot.active {
+      background-color: gray;
+    }
+  }
+} */
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* section.slider-section {
   min-height: 200px;
   width: 100%;
   position: relative;
   div.slider {
     display: flex;
-    /* aspect-ratio: 4 / 1; */
     overflow: auto;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
@@ -42,7 +144,7 @@ section.slider-section {
       opacity: 1;
     }
   }
-}
+} */
 
 section.most-picked {
   /* border: 1px solid red; */
@@ -228,12 +330,6 @@ section.timeline-section {
 }
 
 @media (max-width: 760px) {
-  section.bento-sale {
-    > div.bottom-row {
-      visibility: hidden;
-      height: 0;
-    }
-  }
   section.hero-section {
     > div h1 {
       font-size: 30px;

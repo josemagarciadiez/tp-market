@@ -53,6 +53,66 @@
     <main>
       <section class="slider-section">
         <div class="slider">
+          <picture class="slide" style="display: block">
+            <source
+              srcset="../assets/slider/slide-1.webp"
+              media="(min-width: 920px)" />
+            <img
+              src="../assets/slider/slide-1_small.webp"
+              alt="Banner de promoción bancaria para Banco Nación" />
+          </picture>
+          <picture class="slide" style="display: none">
+            <source
+              srcset="../assets/slider/slide-2.webp"
+              media="(min-width: 920px)" />
+            <img
+              src="../assets/slider/slide-2_small.webp"
+              alt="Banner de promoción bancaria para Banco Nación" />
+          </picture>
+          <picture class="slide" style="display: none">
+            <source
+              srcset="../assets/slider/slide-3.webp"
+              media="(min-width: 920px)" />
+            <img
+              src="../assets/slider/slide-3_small.webp"
+              alt="Banner de promoción bancaria para Banco Nación" />
+          </picture>
+        </div>
+        <div class="slider-nav">
+          <span class="slider-dot" id="0"></span>
+          <span class="slider-dot" id="1"></span>
+          <span class="slider-dot" id="2"></span>
+        </div>
+      </section>
+      <!-- <section class="slider-section">
+        <div class="slider">
+          <div class="slide fade">
+            <img
+              src="../assets/slider/slide-1_small.webp"
+              alt="Promo Banco Nación" />
+          </div>
+          <div class="slide fade">
+            <img
+              src="../assets/slider/slide-2_small.webp"
+              alt="Promo Banco Nación" />
+          </div>
+          <div class="slide fade">
+            <img
+              src="../assets/slider/slide-3_small.webp"
+              alt="Promo Banco Nación" />
+          </div>
+          <a class="slider-prev">&#10094</a>
+          <a class="slider-next">&#10095</a>
+        </div>
+        <div class="slider-nav">
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+          <span class="slider-dot"></span>
+        </div>
+      </section> -->
+
+      <!-- <section class="slider-section">
+        <div class="slider">
           <img
             id="slide-1"
             alt=""
@@ -76,7 +136,7 @@
             src="../assets/slider/slide-3_small.webp"
             srcset="
               ../assets/slider/slide-3_small.webp  700w,
-              ../assets/slider/slide-2.webp       1920w
+              ../assets/slider/slide-3.webp       1920w
             " />
         </div>
         <div class="slider-nav">
@@ -84,7 +144,7 @@
           <a href="#slide-2"></a>
           <a href="#slide-3"></a>
         </div>
-      </section>
+      </section> -->
 
       <section class="most-picked">
         <div class="title">
@@ -413,5 +473,6 @@
     <script src="../scripts/menu.js"></script>
     <script src="../scripts/footer.js"></script>
     <script src="../scripts/most-picked.js"></script>
+    <script src="../scripts/slider.js"></script>
   </body>
 </html>

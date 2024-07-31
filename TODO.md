@@ -5,6 +5,8 @@
 [√] Add script to alert close button.
 [√] Add interactivity to buy button in the cart.
 [√] Fix fav icon in product card in "most picked" section.
-[ ] Fix srcset for the slider images.
+[√] Fix srcset for the slider images.
+[ ] Fix animation when user change slide.
+[ ] Add auto change to the slide.
 [√] Update format price function to add thousand separator.
 [ ] Add comments to functions/scripts.
