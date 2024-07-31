@@ -1,7 +1,10 @@
 [√] Change alert position from bottom to top of the screen.
 [√] Reuse alert to show errors and success messages.
-[ ] Resuse/create new alert to display successfull purchase.
-[ ] Add interactivity to buy button in the cart.
-[ ] Add link in every product card in "most picked" section (index.html).
-[ ] Fix fav icon in product card in "most picked" section (index.html).
-[ ] Fix srcset for the slider images (index.html).
+[ ] Create modal to display successfull purchase & show buy details.
+[√] Fix alert position in small screen sizes.
+[√] Add script to alert close button.
+[√] Add interactivity to buy button in the cart.
+[√] Fix fav icon in product card in "most picked" section.
+[ ] Fix srcset for the slider images.
+[√] Update format price function to add thousand separator.
+[ ] Add comments to functions/scripts.
