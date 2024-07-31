@@ -370,6 +370,7 @@ function animateCartIcon(items) {
 }
 
 const $alert = document.querySelector("section.alert-section");
+const $closeAlertButton = document.querySelector("div.alert-close button");
 
 function showAlert(message, type) {
   const $success = `<i class="fa-solid fa-circle-check fa-xl"></i>`;
@@ -387,9 +388,15 @@ function showAlert(message, type) {
     $alertType.style.backgroundColor = "rgba(0, 128, 0, 0.96)";
   }
   $alert.classList.remove("hidden");
-  setTimeout(() => {
+
+  const closeAlertTimeout = setTimeout(() => {
     $alert.classList.add("hidden");
   }, 20000);
+
+  $closeAlertButton.addEventListener("click", function () {
+    $alert.classList.add("hidden");
+    clearTimeout(closeAlertTimeout);
+  });
 }
 
 /* Funciones utilitarias */
