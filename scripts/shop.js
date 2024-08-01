@@ -500,12 +500,12 @@ $finishButton.addEventListener("click", finishBuy);
 
 /**
  * Create the HTML for the product card.
- * @param {Object[]} product
+ * @param {Product} product
  * @param {number} index
  * @returns {HTMLElement}
  * <article class="product-card">
     <div class="product-card_image">
-      <button id="btn-fav-product[0]">
+      <button>
         <img src="../assets/icons/heart.svg" alt="Icon Heart" />
       </button>
     </div>
@@ -690,11 +690,18 @@ function createCard(product, index) {
   return $card;
 }
 
+/**
+ * Append every product card to parent container
+ * @param {Product[]} products
+ * @param {HTMLElement} element
+ * @returns {void}
+ */
 function loadProducts(products, element) {
   for (let i = 0; i < products.length; i++) {
     element.appendChild(createCard(products[i], i));
   }
 }
+
 // Global DOM Elements
 const $productSection = document.querySelector(".product-section");
 
