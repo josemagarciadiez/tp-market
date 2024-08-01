@@ -399,19 +399,31 @@ function showAlert(message, type) {
   });
 }
 
-/* Funciones utilitarias */
+/* Utility functions */
+
+/**
+ *  Format number to currency
+ * @param {number} price
+ * @returns {string} $ 0,000.00
+ */
 function formatPrice(price) {
+  // 1. Split price in two
   const text = price.toFixed(2).split(".");
+  // 2. Keep decimal portion in "cents"
   const cents = text[1];
-  const thousandths = Math.floor(Number(text[0] / 1000));
-  if (Number(thousandths) > 0) {
-    return `$ ${thousandths}.${Number(text[0] % 1000)
-      .toFixed(0)
-      .padStart(3, "0")},${cents}`;
+  // 3. Divide text[0] by 1000 to get the thousand part
+  // and remove the decimal part with Math.floor()
+  const thousands = Math.floor(Number(text[0] / 1000));
+  // 4. Divide text[0] by 1000 and keep the rest in
+  let hundreds = Number(text[0] % 1000);
+  // 5. Check if thousands is greater than zero
+  if (Number(thousands) > 0) {
+    // If so, attach to first position of the string,
+    // and assure that hundreds will have 3 digits (fill with 0 if necesary)
+    return `$ ${thousands}.${hundreds.toFixed(0).padStart(3, "0")},${cents}`;
   } else {
-    return `$ ${Number(text[0] % 1000)
-      .toFixed(0)
-      .padStart(1, "0")},${cents}`;
+    // If not, hundreds will be in the first position of the string.
+    return `$ ${hundreds},${cents}`;
   }
 }
 
