@@ -9,13 +9,7 @@ const $message = document.getElementById("input-message");
 
 let info = [];
 
-// $contactForm.addEventListener("submit", function (e) {
-//   e.preventDefault();
-
-//   alert("Hola");
-// });
-
-$sendButton.addEventListener("click", function (e) {
+$contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
   info[0] = $name.value;
@@ -30,8 +24,6 @@ $sendButton.addEventListener("click", function (e) {
   }
 
   const blob = new Blob([info], { type: "text/plain;charset=utf-8" });
-
-  console.log(blob);
   // Libreria FileSaver.js
   saveAs(blob, "consulta.txt");
 
