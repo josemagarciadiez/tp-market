@@ -484,7 +484,7 @@ $modalClose.addEventListener("click", function () {
   $discount.innerText = formatPrice(cart.discount);
   $total.innerText = formatPrice(cart.total);
   // Return user to home page
-  window.location.href = "../pages/index.html";
+  window.location.href = "../index.html";
 });
 
 function finishBuy() {
