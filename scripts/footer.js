@@ -8,7 +8,6 @@ $botonSuscribir.addEventListener("click", function (e) {
     alert("Debes ingresesar tu email.");
     return;
   }
-
   alert(
     `Te has suscrito correctamente a nuestro newletter con el correo: ${email}`
   );
