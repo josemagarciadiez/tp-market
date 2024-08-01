@@ -5,7 +5,6 @@ main {
 }
 
 section.slider-section {
-  padding: 10px 0;
   min-height: 200px;
   display: flex;
   align-items: center;
