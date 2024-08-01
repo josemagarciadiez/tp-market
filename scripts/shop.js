@@ -498,6 +498,35 @@ function finishBuy() {
 
 $finishButton.addEventListener("click", finishBuy);
 
+/**
+ * Create the HTML for the product card.
+ * @param {Object[]} product
+ * @param {number} index
+ * @returns {HTMLElement}
+ * <article class="product-card">
+    <div class="product-card_image">
+      <button id="btn-fav-product[0]">
+        <img src="../assets/icons/heart.svg" alt="Icon Heart" />
+      </button>
+    </div>
+    <div class="product-card_title">
+      <p>La Malagueña</p>
+      <h2>Aceitunas Descarozadas 160gr</h2>
+    </div>
+    <div class="product-card_cart">
+      <div class="cart_price">
+        <h3>$ 1.551,00</h3>
+      </div>
+      <div class="cart_buttons">
+        <button>-</button>
+        <span>0</span>
+        <button>+</button>
+      </div>
+    </div>
+    <div class="product-card_button"><button class="btn">Agregar</button></div>
+    <div class="product-card_stock"><p>* Quedan 10 unidades</p></div>
+  </article>
+ */
 function createCard(product, index) {
   // Parent Container
   const $card = document.createElement("article");
@@ -509,7 +538,6 @@ function createCard(product, index) {
   $icon.setAttribute("alt", "Icon Heart");
 
   const $favButton = document.createElement("button");
-  $favButton.setAttribute("id", `btn-fav-product[${index}]`);
 
   $favButton.addEventListener("click", function () {
     const src = $icon.src;
