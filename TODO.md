@@ -9,5 +9,5 @@
 [√] Fix animation when user change slide.\
 [√] Automate slider swipe.\
 [√] Update format price function to add thousand separator.\
-[ ] Add comments to functions/scripts.\
+[√] Add comments to functions/scripts.\
 [√] Change contact script for listen to form submit event.
