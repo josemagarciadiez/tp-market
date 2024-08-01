@@ -30,6 +30,10 @@ function startInterval() {
 for (let i = 0; i < $dots.length; i++) {
   $dots[i].addEventListener("click", function () {
     showSlide(i);
+    // Clear interval
+    clearInterval(sliderInterval);
+    // To startover
+    startInterval();
   });
 }
 
