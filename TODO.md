@@ -7,7 +7,7 @@
 [√] Fix fav icon in product card in "most picked" section.
 [√] Fix responsiviness of slider images.
 [√] Fix animation when user change slide.
-[ ] Automate swipe in slider.
+[√] Automate slider swipe.
 [√] Update format price function to add thousand separator.
 [ ] Add comments to functions/scripts.
 [ ] Change contact script for listen to form submit event.
