@@ -1,5 +1,3 @@
-"use strict";
-
 const data = [
   {
     title: "Aceitunas Descarozadas 160gr",
