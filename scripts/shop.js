@@ -1,3 +1,5 @@
+"use strict";
+
 const data = [
   {
     title: "Aceitunas Descarozadas 160gr",
@@ -385,7 +387,7 @@ function showAlert(message, type) {
     $alertType.style.backgroundColor = "rgba(255, 0, 0, 0.96)";
   } else {
     $alertType.innerHTML = $success;
-    $alertType.style.backgroundColor = "rgba(0, 128, 0, 0.96)";
+    $alertType.style.backgroundColor = "rgba(20, 169, 79, 0.96)";
   }
   $alert.classList.remove("hidden");
 
@@ -400,18 +402,18 @@ function showAlert(message, type) {
 }
 
 /* Funciones utilitarias */
-// TODO: Formatear miles
 function formatPrice(price) {
   const text = price.toFixed(2).split(".");
   const cents = text[1];
-  const hundreds = Number(text[0] % 1000)
-    .toFixed(0)
-    .padStart(3, "0");
   const thousandths = Math.floor(Number(text[0] / 1000));
   if (Number(thousandths) > 0) {
-    return `$ ${thousandths}.${hundreds},${cents}`;
+    return `$ ${thousandths}.${Number(text[0] % 1000)
+      .toFixed(0)
+      .padStart(3, "0")},${cents}`;
   } else {
-    return `$ ${hundreds},${cents}`;
+    return `$ ${Number(text[0] % 1000)
+      .toFixed(0)
+      .padStart(1, "0")},${cents}`;
   }
 }
 
@@ -441,58 +443,47 @@ function updateCart(quantity, index) {
 
   animateCartIcon(cart.items);
 
-  $items.innerText = cart.items.toString();
+  $items.innerText = cart.items;
   $subtotal.innerText = formatPrice(cart.subtotal);
   $discount.innerText = formatPrice(cart.discount);
   $total.innerText = formatPrice(cart.total);
 }
 
+const $body = document.querySelector("body");
+const $modal = document.querySelector("div.modal-mask");
+const $modalClose = document.querySelector("div.modal-close button");
+const $modalTotal = document.getElementById("modal-total_span");
+const $modalPayment = document.getElementById("modal-payment_span");
+const $modalItems = document.getElementById("modal-items_span");
+const $modalSubtotal = document.getElementById("modal-subtotal_span");
+const $modalDiscount = document.getElementById("modal-discount_span");
+
+function showModal() {
+  $modalTotal.innerText = formatPrice(cart.total);
+  $modalPayment.innerText = PAYMENT_METHOD[cart.payment];
+  $modalItems.innerText = cart.items;
+  $modalSubtotal.innerText = formatPrice(cart.subtotal);
+  $modalDiscount.innerText = formatPrice(cart.discount);
+  $modal.style.display = "flex";
+  $body.style.overflow = "hidden";
+}
+
+$modalClose.addEventListener("click", function () {
+  $modal.style.display = "none";
+  $body.style.overflow = "auto";
+});
+
 function finishBuy() {
   cart.payment = $payment.value;
-
   if (cart.items === 0) {
     alert("El carrito esta vacio");
   } else {
     alert(`Compra finalizada con éxito ${PAYMENT_METHOD[cart.payment]}`);
+    showModal();
   }
 }
 
 $finishButton.addEventListener("click", finishBuy);
-
-/*
-<article class="card">
-  <div class="card-image">
-    <span>onSale</span>
-    <button>
-      <img src="../assets/icons/heart.svg" alt="icono guardar" />
-    </button>
-  </div>
-  <div class="card-title">
-    <p>La Malagueña</p>
-    <h2>Aceitunas Descarozadas 160gr</h2>
-  </div>
-  <div class="card-cart">
-    <div class="cart_price">
-      <del>$ 1550,82</del>
-      <h3>$ 1550,82</h3>
-    </div>
-    <div>
-      <button id="boton-restar-producto[0]">-</button>
-      <span id="ouput-cantidad-producto[0]">0</span>
-      <button id="boton-sumar-producto[0]">+</button>
-    </div>
-  </div>
-  <div class="card-button">
-    <button id="boton-agregar-producto[0]" class="btn">
-      Agregar
-    </button>
-  </div>
-  <div class="card-stock">
-    <p id="stock-producto[${i}]">* Quedan 10 unidades</p>
-  </div>
-</article>;
-
- */
 
 function createCard(product, index) {
   // Parent Container

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../styles/shop.css" />
     <link rel="stylesheet" href="../styles/product-card.css" />
     <link rel="stylesheet" href="../styles/alert.css" />
+    <link rel="stylesheet" href="../styles/modal.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -59,6 +60,50 @@
     </header>
 
     <main>
+      <div class="modal-mask">
+        <section class="modal-section">
+          <div class="modal-close">
+            <button>
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-content">
+            <div class="modal-content_icon">
+              <i class="fa-solid fa-circle-check fa-2xl"></i>
+            </div>
+            <div class="modal-content_title">
+              <h2>¡Muchas gracias!</h2>
+              <p>Tu pago fue procesado correctamente.</p>
+            </div>
+            <div class="modal-content_total">
+              <p>Pago total</p>
+              <h3><span id="modal-total_span">$ 0,00</span></h3>
+            </div>
+            <div class="modal-content_details">
+              <p>
+                <span>Método de pago:</span>
+                <span id="modal-payment_span">Efectivo</span>
+              </p>
+              <p>
+                <span>Artículos:</span>
+                <span id="modal-items_span">0</span>
+              </p>
+              <p>
+                <span>Subtotal:</span>
+                <span id="modal-subtotal_span">$ 0,00</span>
+              </p>
+              <p>
+                <span>Descuentos:</span>
+                <span id="modal-discount_span">$ 0,00</span>
+              </p>
+            </div>
+          </div>
+          <div class="modal-buttons">
+            <button><i class="fa-solid fa-download"></i>Descargar</button>
+            <button><i class="fa-solid fa-share-nodes"></i>Compartir</button>
+          </div>
+        </section>
+      </div>
       <section class="cart-section hidden">
         <img src="../assets/empty-cart.svg" alt="carrito vacio" />
         <div>
