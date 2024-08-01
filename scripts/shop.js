@@ -356,7 +356,7 @@ const cart = {
 const PAYMENT_METHOD = {
   cash: "Efectivo",
   debit: "Tarjeta de débito",
-  credit: "Tarjtea de crédito",
+  credit: "Tarjeta de crédito",
   app: "Mercado Pago",
 };
 
@@ -471,6 +471,20 @@ function showModal() {
 $modalClose.addEventListener("click", function () {
   $modal.style.display = "none";
   $body.style.overflow = "auto";
+
+  // On modal close, clear the user cart
+  cart.items = 0;
+  cart.subtotal = 0;
+  cart.discount = 0;
+  cart.total = 0;
+  cart.payment = "cash";
+
+  $items.innerText = cart.items;
+  $subtotal.innerText = formatPrice(cart.subtotal);
+  $discount.innerText = formatPrice(cart.discount);
+  $total.innerText = formatPrice(cart.total);
+  // Return user to home page
+  window.location.href = "../pages/index.html";
 });
 
 function finishBuy() {
@@ -478,7 +492,6 @@ function finishBuy() {
   if (cart.items === 0) {
     alert("El carrito esta vacio");
   } else {
-    alert(`Compra finalizada con éxito ${PAYMENT_METHOD[cart.payment]}`);
     showModal();
   }
 }
