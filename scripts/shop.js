@@ -528,11 +528,12 @@ $finishButton.addEventListener("click", finishBuy);
   </article>
  */
 function createCard(product, index) {
-  // Parent Container
+  // Parent container
   const $card = document.createElement("article");
   $card.classList.add("product-card");
+  // ---------------------------------------------------------------------- //
 
-  // First child
+  // First child.
   const $icon = document.createElement("img");
   $icon.setAttribute("src", "../assets/icons/heart.svg");
   $icon.setAttribute("alt", "Icon Heart");
@@ -565,6 +566,7 @@ function createCard(product, index) {
   $cardImageContainer.style.backgroundImage = `url("${product.imageUrl}")`;
 
   $card.appendChild($cardImageContainer);
+  // ---------------------------------------------------------------------- //
 
   // Second child
   const $brand = document.createElement("p");
@@ -579,6 +581,7 @@ function createCard(product, index) {
   $cardTitleContainer.appendChild($title);
 
   $card.appendChild($cardTitleContainer);
+  // ---------------------------------------------------------------------- //
 
   // Third child
   let previousPrice = product.price;
@@ -642,6 +645,7 @@ function createCard(product, index) {
   $cardCartContainer.appendChild($buttonCartContainer);
 
   $card.appendChild($cardCartContainer);
+  // ---------------------------------------------------------------------- //
 
   // Fourth child
   const $addToCartButton = document.createElement("button");
@@ -675,6 +679,7 @@ function createCard(product, index) {
   $cardButtonContainer.appendChild($addToCartButton);
 
   $card.appendChild($cardButtonContainer);
+  // ---------------------------------------------------------------------- //
 
   // Fifth child
   const message = getMessage(product.stock);
@@ -684,9 +689,10 @@ function createCard(product, index) {
   const $cardStockContainer = document.createElement("div");
   $cardStockContainer.classList.add("product-card_stock");
   $cardStockContainer.appendChild($message);
-
   $card.appendChild($cardStockContainer);
+  // ---------------------------------------------------------------------- //
 
+  // Return HTML Element
   return $card;
 }
 
