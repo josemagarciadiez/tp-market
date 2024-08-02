@@ -370,29 +370,43 @@ function animateCartIcon(items) {
 }
 
 const $alert = document.querySelector("section.alert-section");
+const $alertType = document.querySelector("div.alert-type");
+const $alertContent = document.querySelector("div.alert-content");
 const $closeAlertButton = document.querySelector("div.alert-close button");
 
+// Alert type icon markup
+const $success = `<i class="fa-solid fa-circle-check fa-xl"></i>`;
+const $error = `<i class="fa-solid fa-circle-xmark fa-xl"></i>`;
+const $info = `<i class="fa-solid fa-circle-info fa-xl"></i>`;
+
+// Alert global timmer
+let closeAlertTimeout;
+
 function showAlert(message, type) {
-  const $success = `<i class="fa-solid fa-circle-check fa-xl"></i>`;
-  const $error = `<i class="fa-solid fa-circle-xmark fa-xl"></i>`;
-  const $alertType = document.querySelector("div.alert-type");
-
-  const $alertContent = document.querySelector("div.alert-content");
+  // Clear previous timmer
+  clearTimeout(closeAlertTimeout);
+  // Close previous alert
+  $alert.classList.add("hidden");
+  // Change message on the alert body
   $alertContent.innerHTML = `<span>${message}</span>`;
-
+  // Check type to render the corresponding icon and bg color
   if (type === "error") {
     $alertType.innerHTML = $error;
     $alertType.style.backgroundColor = "rgba(255, 0, 0, 0.96)";
+  } else if (type === "info") {
+    $alertType.innerHTML = $info;
+    $alertType.style.backgroundColor = "var(--primary-color)";
   } else {
     $alertType.innerHTML = $success;
     $alertType.style.backgroundColor = "rgba(20, 169, 79, 0.96)";
   }
+  // Show new alert
   $alert.classList.remove("hidden");
-
-  const closeAlertTimeout = setTimeout(() => {
+  // Start new timmer
+  closeAlertTimeout = setTimeout(() => {
     $alert.classList.add("hidden");
   }, 6000);
-
+  // Add event to close button
   $closeAlertButton.addEventListener("click", function () {
     $alert.classList.add("hidden");
     clearTimeout(closeAlertTimeout);
@@ -513,6 +527,7 @@ $finishButton.addEventListener("click", finishBuy);
  * @param {Product} product
  * @param {number} index
  * @returns {HTMLElement}
+ * Example:
  * <article class="product-card">
     <div class="product-card_image">
       <button>
@@ -554,8 +569,10 @@ function createCard(product, index) {
     const src = $icon.src;
     if (src.includes("/assets/icons/heart.svg")) {
       $icon.setAttribute("src", "../assets/icons/heart-filled.svg");
+      showAlert("Se ha agregado el producto a favoritos", "info");
     } else {
       $icon.setAttribute("src", "../assets/icons/heart.svg");
+      showAlert("Se ha eliminado el producto de favoritos", "info");
     }
   });
 
