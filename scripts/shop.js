@@ -687,7 +687,7 @@ function createCard(product, index) {
 
   $addToCartButton.addEventListener("click", function () {
     if (items === 0) {
-      alert("Debes elegir una cantidad mayor a 0.");
+      showAlert("Debes elegir una cantidad mayor a 0", "info");
       return;
     }
 
