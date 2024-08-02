@@ -1,7 +1,8 @@
 const $botonSuscribir = document.getElementById("button-suscription");
+const $suscribeForm = document.querySelector("form.suscription");
 const $inputEmail = document.getElementById("email-suscription");
 
-$botonSuscribir.addEventListener("click", function (e) {
+$suscribeForm.addEventListener("submit", function (e) {
   e.preventDefault();
   const email = $inputEmail.value;
   if (!email) {
