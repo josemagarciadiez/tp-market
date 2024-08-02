@@ -382,6 +382,12 @@ const $info = `<i class="fa-solid fa-circle-info fa-xl"></i>`;
 // Alert global timmer
 let closeAlertTimeout;
 
+/**
+ * Create alert modal in the top right corner (or bottom) of the screen.
+ * to display a message to user, with icon representing the type of that message.
+ * @param {string} message
+ * @param {string} type --> "error" | "success" | "info"
+ */
 function showAlert(message, type) {
   // Clear previous timmer
   clearTimeout(closeAlertTimeout);
