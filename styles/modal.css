@@ -11,7 +11,7 @@ div.modal-mask {
   justify-content: center;
   > section.modal-section {
     width: 400px;
-    height: 500px;
+    min-height: 520px;
     background-color: white;
     border-radius: 10px;
     border: 1px solid gray;
@@ -107,6 +107,16 @@ div.modal-mask {
       > button:hover {
         background-color: lightgray;
       }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  div.modal-mask {
+    > section.modal-section {
+      border-radius: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }
