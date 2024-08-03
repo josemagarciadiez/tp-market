@@ -10,4 +10,5 @@
 [√] Automate slider swipe.\
 [√] Update format price function to add thousand separator.\
 [√] Add comments to functions/scripts.\
-[√] Change contact script for listen to form submit event.
+[√] Change contact script for listen to form submit event.\
+[ ] Split function createCard into smaller chunks.

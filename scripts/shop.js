@@ -528,6 +528,8 @@ function finishBuy() {
 
 $finishButton.addEventListener("click", finishBuy);
 
+// TODO: Modularizar funcion createCard
+
 /**
  * Create the HTML for the product card.
  * @param {Product} product
